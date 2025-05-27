@@ -8,7 +8,6 @@ Exposing an API for easy integration
  Key Features:
 🔹 Content-based filtering using machine learning
 🔹 Real-time recommendations based on user input
-🔹 Flask-powered API for easy deployment
 🔹 Customizable dataset – works with any movies.csv
 🔹 Scalable and lightweight solution
  Methodology:

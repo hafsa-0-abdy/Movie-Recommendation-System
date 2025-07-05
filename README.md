@@ -17,14 +17,6 @@ Based on my setup experience, here's what you need to get this running:
 - **pip** for package management
 - **Git** to clone the repo
 
-### System Specs
-- At least 4GB RAM (I'd recommend 8GB if you're working with large datasets)
-- 2GB free disk space
-- Any OS works - I tested on both Windows and macOS
-
-### Optional but Helpful
-- **VS Code** or your preferred editor
-- **Anaconda** if you like conda environments (though I used venv)
 
 ## Getting Started
 
@@ -36,7 +28,7 @@ Here's how I got everything set up:
 git clone https://github.com/yvidhya/Movie-Recommendation-System.git
 cd Movie-Recommendation-System
 
-# I always create a virtual environment - saves headaches later
+#Create a virtual environment 
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
@@ -46,7 +38,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 # Install the main packages
 pip install pandas numpy scikit-learn flask jupyter
 
-# If there's a requirements.txt (there usually is):
+#Requirements.txt 
 pip install -r requirements.txt
 ```
 
@@ -60,7 +52,7 @@ Place it in the main project directory.
 
 I found three ways to run this, depending on what you want to do:
 
-### Option 1: Jupyter Notebook (My Preferred Way)
+### Option 1: Jupyter Notebook 
 ```bash
 jupyter notebook
 ```
@@ -144,10 +136,6 @@ for movie in recommendations:
     print(f"{movie['title']} - Score: {movie['similarity_score']:.3f}")
 ```
 
-**What I learned**: The TF-IDF vectorizer uses these settings:
-- `max_features=5000`: Limits vocabulary size
-- `stop_words='english'`: Removes common words like "the", "and"
-- `ngram_range=(1, 2)`: Uses single words and word pairs
 
 ## API Usage
 
@@ -175,7 +163,7 @@ pip install scikit-learn pandas numpy flask
 ```
 
 ### Dataset Issues
-The biggest headache was getting the right dataset format. If you get file errors:
+The biggest issue was getting the right dataset format. If you get file errors:
 1. Double-check the file path
 2. Make sure your CSV has the right columns
 3. Try a smaller dataset first (like 1000 movies) to test
